@@ -3,6 +3,7 @@ import Vue from 'vue'
 Vue.use(Router)
 import Home from './components/home'
 import todolists from './components/todolist'
+import todoVuex from  './components/todo-vuex'
 const router = new Router({
   routes:[
     {
@@ -12,6 +13,10 @@ const router = new Router({
     {
       path: '/todolists',
       component: todolists
+    },
+    {
+      path:'/todo-vuex',
+      component: todoVuex
     }
 ]
 })

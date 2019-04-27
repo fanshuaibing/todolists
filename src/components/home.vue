@@ -4,8 +4,10 @@
 			<router-link to="/todolists">
 				<li>todolist-Vue</li>
 			</router-link>
+			<router-link to="/todo-vuex">
+				<li>todolist-Vuex</li>
+			</router-link>
 
-			<li>todolist-Vuex</li>
 			<li>counter-vue</li>
 			<li>counter-vuex</li>
 		</ul>

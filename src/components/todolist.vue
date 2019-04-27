@@ -4,9 +4,15 @@
 		<button v-on:click="add">添加</button>
 		<div v-for="(todo , index) in  todos" :key="index" v-if="!todo.completed && !todo.deleted ">
 			<span class="circle" @click="completedTodo(todo)"></span>
-			<span>{{todo.content}}
+			<span @click="edited(todo)">{{todo.content}}
 			</span>
 			<button @click="deleteTodo(todo)">X</button>
+			<br>
+			<br>
+
+			<input type="text" v-model="todo.content" v-if="todo.edited">
+
+			<button @click="edited(todo)" v-if="todo.edited">确认修改</button>
 		</div>
 		<div class="completed">
 			<h2>已完成</h2>
@@ -24,10 +30,10 @@
       return {
         todo: '',
         todos: [
-          {content: '第一个todo', completed: true, deleted: false},
-          {content: '第二个todo', completed: false, deleted: false},
-          {content: '第三个todo', completed: false, deleted: false},
-          {content: '第四个todo', completed: true, deleted: false}
+          {content: '第一个todo', completed: true, deleted: false ,edited: false},
+          {content: '第二个todo', completed: false, deleted: false, edited: false},
+          {content: '第三个todo', completed: false, deleted: false, edited : false},
+          {content: '第四个todo', completed: true, deleted: false , edited : false}
         ],
         completedTodos: []
       }
@@ -36,7 +42,7 @@
       add() {
         console.log(this.todo);
         if (this.todo) {
-          this.todos.unshift({content: this.todo, completed: false, deleted: false})
+          this.todos.unshift({content: this.todo, completed: false, deleted: false ,edited: false})
           console.log(this.todos);
         }
         this.todo = ''
@@ -48,6 +54,9 @@
       ,
       completedTodo(todo) {
         todo.completed = true
+      },
+      edited(todo){
+        todo.edited = !todo.edited
       }
     }
 
