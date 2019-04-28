@@ -7,9 +7,12 @@
 			<router-link to="/todo-vuex">
 				<li>todolist-Vuex</li>
 			</router-link>
-
-			<li>counter-vue</li>
-			<li>counter-vuex</li>
+			<router-link to="/counter">
+				<li>counter-vue</li>
+			</router-link>
+			<router-link to="/counterhot">
+				<li>counter-vuex</li>
+			</router-link>
 		</ul>
 	</div>
 </template>
@@ -17,9 +20,7 @@
 <script>
   export default {
     name: "home",
-    computed: {
 
-    }
   }
 </script>
 

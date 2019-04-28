@@ -8,8 +8,10 @@
 			<span >{{todo.content}}</span>
 			<button @click="innerdelete(todo) ">删除</button>
 
-
-
+		</div>
+		<div class="completed" >
+			<h3>已完成</h3>
+			<div v-for="todo in todos " v-if="todo.completed">{{todo.content}}</div>
 		</div>
 	</div>
 </template>

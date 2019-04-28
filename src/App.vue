@@ -28,4 +28,10 @@
 		color: #2c3e50;
 		margin-top: 60px;
 	}
+	button{
+		padding:5px 10px;
+		font-size: 16px;
+		border: 2px solid black;
+		margin: 10px;
+	}
 </style>

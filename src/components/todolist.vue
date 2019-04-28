@@ -16,7 +16,7 @@
 		</div>
 		<div class="completed">
 			<h2>已完成</h2>
-			<div v-for="(todo,index) in todos" v-if="todo.completed">
+			<div v-for="todo in todos" v-if="todo.completed">
 				{{todo.content}}
 			</div>
 		</div>
@@ -65,35 +65,22 @@
 </script>
 
 
-<style scoped>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+<style lang="scss">
+	div {
+		.circle {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 2px solid black;
+			border-radius: 50%;
+		}
 
-	ul {
-		list-style-type: none;
-		padding: 0;
+		.completed {
+			padding-top: 100px;
+			color: red;
+		}
 	}
-
-	li {
-		display: inline-block;
-		margin: 0 10px;
-	}
-
-	.circle {
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		border: 2px solid black;
-		border-radius: 50%;
-	}
-	.completed{
-		padding-top: 100px;
-	}
-
-	a {
-		color: #42b983;
-	}
+		a{
+			color: #000000;
+		}
 </style>

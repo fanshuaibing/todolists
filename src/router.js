@@ -4,6 +4,8 @@ Vue.use(Router)
 import Home from './components/home'
 import todolists from './components/todolist'
 import todoVuex from  './components/todo-vuex'
+import  counter from  './components/counter'
+import  counterhot from  './components/counter-hot'
 const router = new Router({
   routes:[
     {
@@ -17,6 +19,14 @@ const router = new Router({
     {
       path:'/todo-vuex',
       component: todoVuex
+    },
+    {
+      path:'/counter',
+      component: counter
+    },
+    {
+      path:'/counterhot',
+      component: counterhot
     }
 ]
 })
